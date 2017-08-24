@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crystals Collerctor</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div class="container">
+    
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Crystals Collector!</h1>
+    
+  </div>
+</div>
+    <div class="card" id="neat">
+      <div class="card-header"><h4>Instructions</h4></div>
+      <div class="card-body">
+        
+        <p class="card-text">
+          <ol>
+            <li> You will be given a random number at the start of the game.</li>
+            <li> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+            <li> You win the game by matching your total score to random number, you loose the game if your total score goes above the random number.</li>
+            <li> The value of each crystal is hidden from you until you click on it.</li>
+            <li> Each time when the game starts, the game will change the values of each crystal.</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+    <div class="row contentsRow">
+      <div class="col-md-4">
+        <div class="card statsCard">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span id="numGuesses">Number To Guess:</span></li>
+            <li class="list-group-item"><span id="currentNum">Current Status:</span></li>
+            <li class="list-group-item"><span id="numWins">Wins:</span></li>
+            <li class="list-group-item"><span id="numLosses">Losses:</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header"><h4>Click a crystal to begin</h4></div>
+          <div class="card-body">
+            <div class="card-text">
+              <button type="button" id="crystal1" value="1">
+              <img id="crystals" src="assets/images/blue.PNG">
+              </button>
+              <button type="button" id="crystal2" value="2">
+              <img id="crystals" src="assets/images/red.PNG">
+              </button>
+              <button type="button" id="crystal3" value="3">
+              <img id="crystals" src="assets/images/yellow.PNG">
+              </button>
+              <button type="button" id="crystal4" value="4">
+              <img id="crystals" src="assets/images/green.PNG">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"</script>
+    
+    
+  </body>
+</html>
