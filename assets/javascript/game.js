@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+//Global Variables
 var numberToGuess = [];
 var wins = 0;
 var loss = 0;
@@ -9,15 +10,15 @@ var crystal2 = 	Math.floor(Math.random() * (12-1) + 1);
 var crystal3 = 	Math.floor(Math.random() * (12-1) + 1);
 var crystal4 = 	Math.floor(Math.random() * (12-1) + 1);
 
+//Generates Random Number to achieve through guessing.
 
-randomNumberGen(){
 var randomNumber = Math.floor(Math.random() * 120 + 1);
 console.log(randomNumber);
 numberToGuess = randomNumber;
 
 $("#numGuesses").html("Number to Guess: " + randomNumber);
-}
-	
+
+//Generate key clicks for your Crystal images..	
 
 	 $("#crystal1").click(function(){
  	var randomOnClick = Math.floor((Math.random() * 12) + 1);
@@ -29,16 +30,18 @@ $("#numGuesses").html("Number to Guess: " + randomNumber);
 		alert("You Lose!");
 		loss++;
 		$("#numLosses").html("Losses: " + loss);
-		randomNumberGen();
+				
+
 	}
 	else if ( totalScore == numberToGuess){
 		alert("You Win!");
 		wins++;
 		$("#numWins").html("Wins: " + wins);
-		randomNumberGen(); 
+		
 	}
- 	});
+	
 
+ 	});
 
  $("#crystal2").click(function(){
  	var randomOnClick = Math.floor((Math.random() * 12) + 1);
@@ -57,7 +60,6 @@ $("#numGuesses").html("Number to Guess: " + randomNumber);
 		$("#numWins").html("Wins: " + wins);
 	}
 	});
-
  
  $("#crystal3").click(function(){
  	var randomOnClick = Math.floor((Math.random() * 12) + 1);
@@ -75,7 +77,6 @@ $("#numGuesses").html("Number to Guess: " + randomNumber);
 		$("#numWins").html("Wins: " + wins); 
 	}
 	});
-
  
  $("#crystal4").click(function(){
  	var randomOnClick = Math.floor((Math.random() * 12) + 1);
